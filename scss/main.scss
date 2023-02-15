@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'myfont-bold';
     src: url('../assetis/fonte/DMSans-Bold.ttf');
-    // font-weight: normal;
-    // font-style:  normal;
   }
 
 $green: #00DF5E;
@@ -26,38 +24,46 @@ body{
 }
 
 header{
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: auto;
     padding: 17px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 116px;
+    // margin-bottom: 116px;
 }
-
-nav{
-    ul{
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        gap: 45px;
-        a{
-            color: $whith;
-        }
-    }
+nav a{
+    color: #fff;
+}
+// nav{
+//     position: relative;
+//     display: block;
+// }
+.btnOpen{
+    display: none;
+}
+.btnClose{
+    display: none;
+}
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 45px;
 }
 main{
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: auto;
     padding: 17px;
 }
 .apresentacao{
+    background: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 160px;
+    padding: 160px 0;
     article{
         height: 215px;
         width: 337px;
@@ -97,9 +103,15 @@ main{
             }
         }
     }
+    .img-perfil{
+        display: block;
+        width: 100%;
+        max-width: 375px;
+    }
 }
 
 .sobre-mim{
+    // background: #333333;
     text-align: center;
     margin-bottom: 127px;
     
@@ -130,6 +142,7 @@ main{
 }
 
 .projetos{
+    background: black;
     margin-bottom: 127px;
     div{
 
@@ -176,6 +189,7 @@ main{
 }
 
 .servico-1{
+    margin-bottom: 116px;
     h1{
         text-align: center;
         margin-bottom: 30px;
@@ -242,7 +256,40 @@ footer{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+    // nav{
+    //     width: 0;
+    // }
+   #menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 0;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+        background: #fff;
+        padding: 2rem 0;
+        overflow: hidden;
+        transition: width 0.4s;
+   }
+   #menu a{
+        color: black !important;
+   }
+        .btnOpen{
+             display: block;
+        }
+        .btnClose{
+             display: block;
+        }
+        .btnClose img{
+             color: black !important;
+             background: #171717;
+        }
 
     .apresentacao{
         flex-wrap: wrap;
@@ -258,7 +305,7 @@ footer{
                 }
             }
         }
-        img{
+        .img-perfil{
         display: none;
     }
 }

@@ -1,0 +1,124 @@
+
+@font-face {
+     font-family: 'myfont-bold';
+     src: url('../assetis/fonte/DMSans-Bold.ttf');
+
+}
+*{
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     color: #fff;
+ }
+body{
+     background: #171717;
+     font-family: 'myfont-bold'; 
+     margin-top: 35px;
+}
+header{
+     margin: auto;
+     padding: 1.7rem;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 116px;
+ }
+.btnOpen{
+     display: none;
+}
+.btnClose{
+     display: none;
+}
+#menu{
+     display: flex;
+     align-items: center;
+     gap: 45px;
+}
+
+main{
+     margin: auto;
+    padding: 17px;
+}
+.apresentacao{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     padding-bottom: 160px;
+
+ }
+ article{
+     height: 215px;
+     width: 337px;
+ }
+
+ h1{
+     font-family: 'myfont-bold';
+     font-weight: 700;
+     font-size: 36px;
+     line-height: 47px;
+ }
+ p{
+     font-weight: 500;
+     font-size: 18px ;
+     line-height: 23px;
+     color: white;
+     margin-top: 18px;
+     margin-bottom: 35px;
+ }
+ /* .btn-1{ */
+     /* background: ;
+     color: $dark;
+     border: none;
+ }
+ .btn-2{
+     background: transparent;
+     color: $whith;
+     border: 1px solid $whith;
+ } */
+ button{
+     width: 143px;
+     height: 42px;
+     font-size: 14px;
+     font-weight: 500px;
+     line-height: 18.13px;
+     cursor: pointer;
+ }
+
+ @media (max-width: 720px) {
+     nav{
+          position: relative;
+          display: block;
+     }
+     #menu{
+          position: fixed;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          z-index: 1;
+          width: 0;
+          height: 80vh;
+          align-items: center;
+          justify-content: center;
+          gap: 45px;
+          background: #fff;
+          padding: 2rem 0;
+          overflow: hidden;
+          transition: width 0.4s;
+     }
+     #menu a{
+          color: black !important;
+     }
+          .btnOpen{
+               display: block;
+          }
+          .btnClose{
+               display: block;
+          }
+          .btnClose img{
+               color: black !important;
+               background: #171717;
+          }
+ }
