@@ -1,5 +1,5 @@
 function OpenMenu(){
-     document.getElementById("menu").style.width = "100%"
+     document.getElementById("menu").style.width = "80%"
 }
 
 function CloseMenu(){
